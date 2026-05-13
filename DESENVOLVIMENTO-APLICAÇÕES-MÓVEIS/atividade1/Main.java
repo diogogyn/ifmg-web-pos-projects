@@ -5,14 +5,14 @@ public class Main {
         // Funcionalidade personalizada: Simulando um diagnóstico de sistema
         AcaoCustomizada autoDiagnostico = () -> {
             System.out.println("[SISTEMA] Escaneando hardware... OK");
-            System.out.println("[SISTEMA] Nível de oxigênio em Marte: 0.13%");
+            System.out.println("[SISTEMA] Nível de oxigênio em Marte: 1.15%");
             System.out.println("[SISTEMA] Status: Marciano está pronto para dominar o mundo.");
         };
 
         RoboMarcianoPremium robo = new RoboMarcianoPremium(autoDiagnostico);
         Scanner scanner = new Scanner(System.in);
         String entrada;
-
+        System.out.println("---------------------------------------------------");
         System.out.println("Marciano Online. Digite algo (ou 'FIM' para sair):");
 
         while (true) {
@@ -29,7 +29,7 @@ public class Main {
                     for (int i = 0; i < nums.length; i++) nums[i] = Double.parseDouble(partes[i+1]);
                     System.out.println(robo.responda(partes[0], nums));
                 } catch (Exception e) {
-                    System.out.println("Formato inválido. Use: some 10 20");
+                    System.out.println("Formato inválido. Use: some 10 20 por exemplo.");
                 }
             } else {
                 System.out.println(robo.responda(entrada));

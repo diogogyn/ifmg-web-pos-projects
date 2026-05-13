@@ -10,12 +10,12 @@ class RoboMarcianoMatematico extends RoboMarciano {
                 case "subtraia" -> resultado -= numeros[i];
                 case "multiplique" -> resultado *= numeros[i];
                 case "divida" -> {
-                    if (numeros[i] == 0) return "Erro: Divisão por zero intergaláctica!";
+                    if (numeros[i] == 0) return "Erro: Divisão por zero!";
                     resultado /= numeros[i];
                 }
                 default -> { return super.responda(operacao); }
             }
         }
-        return "Essa eu sei: " + resultado;
+        return "O resultado é: " + resultado;
     }
 }
